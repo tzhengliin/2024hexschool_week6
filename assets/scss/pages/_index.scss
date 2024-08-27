@@ -1,0 +1,25 @@
+.theme-card{
+    position: relative;
+    // border-top-left-radius: 20px;
+    // border-bottom-right-radius: 20px;
+    img{
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .theme-title{
+        position: absolute;
+        top:50%;
+        left:50%;
+    }
+}
+
+.photogrid{
+    gap: 4px;
+}
+
+.tag{
+    letter-spacing: 0.1em;
+    padding-top: 4px; 
+    padding-bottom: 4px;
+    border-radius: 4px;
+}

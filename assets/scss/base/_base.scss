@@ -1,7 +1,8 @@
 body{
     background: $primary-100;
     font-family: "Noto Serif TC", serif;
-    line-height: 1.5;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
 }
 img {
     max-width: 100%;
@@ -9,6 +10,15 @@ img {
 }
 
 h2{
-    letter-spacing: 0.1em;
     font-weight: 900;
+}
+
+.fs-1{
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+a{
+    text-decoration: none;
+    color:$accent-200;
 }

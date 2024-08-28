@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week6</title>
+    <title>2024hexschool_week6</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -19,7 +19,7 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <section class="container px-0 py-10 position-relative">
+    <section class="container py-8 py-lg-10 position-relative">
       <picture>
         <source
           media="(min-width: 992px)"
@@ -33,16 +33,23 @@
       </picture>
       <div
         class="position-absolute top-50 translate-middle-y text-lg-start ps-lg-9 text-center text-white w-100"
+        style="margin-left: -12px"
       >
         <h3 class="fs-lg-5 fs-md-5 fs-6 mb-3 w-100">獻給新世代的生活風格誌</h3>
         <h2 class="fs-lg-1 fs-md-1 fs-3 mb-5 w-100">一起探索生活的無限可能</h2>
-        <button class="btn btn-secondary-200 px-4 py-lg-3 px-lg-5">
+        <button class="btn btn-secondary-200 text-white px-4 py-lg-3 px-lg-5">
           馬上訂閱
+          <span
+            class="material-symbols-outlined fs-2"
+            style="line-height: 1; vertical-align: middle"
+          >
+            arrow_right_alt
+          </span>
         </button>
       </div>
     </section>
 
-    <section class="container py-10">
+    <section class="container py-8 py-lg-10">
       <h2 class="mb-5">熱門主題</h2>
       <div class="row gy-5">
         <div class="col col-12 col-md-6 col-lg-3">
@@ -175,30 +182,14 @@
         </div>
       </div>
     </section>
-    
+
     <section>
-      <div class="container py-10">
+      <div class="container py-8 py-lg-10">
         <div class="row">
           <div class="col col-4 flex-column d-none d-md-flex">
             <h2 class="mb-auto">精選文章</h2>
             <p class="fs-4">1 / 5</p>
-            <div class="d-flex align-items-center">
-              <span
-                class="material-symbols-outlined fs-1 px-2 border rounded-pill"
-              >
-                arrow_left_alt
-              </span>
-              <div
-                class="flex-grow-0 mx-3 border border-bottom"
-                style="width: 80px"
-              ></div>
-
-              <span
-                class="material-symbols-outlined fs-1 px-2 border rounded-pill"
-              >
-                arrow_right_alt
-              </span>
-            </div>
+            <%- include('./layout/components/switch_arrows'); -%>
           </div>
           <div class="col col-md-8 col-12">
             <h2 class="mb-5 d-block d-md-none">精選文章</h2>
@@ -248,32 +239,19 @@
             </div>
             <div class="d-flex justify-content-between d-block d-md-none">
               <p class="fs-4">1 / 5</p>
-              <div class="d-flex align-items-center">
-                <span
-                  class="material-symbols-outlined fs-1 px-2 border rounded-pill"
-                >
-                  arrow_left_alt
-                </span>
-                <div
-                  class="flex-grow-0 mx-3 border border-bottom"
-                  style="width: 80px"
-                ></div>
-                <span
-                  class="material-symbols-outlined fs-1 px-2 border rounded-pill"
-                >
-                  arrow_right_alt
-                </span>
-              </div>
+              <%- include('./layout/components/switch_arrows'); -%>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <section class="bg-primary-200">
-      <div class="container py-10 d-flex flex-column gap-4 align-items-center position-relative overflow-hidden">
-        <h4>\ 母親節強檔活動 /</h2>
-        <h2>家庭訂閱方案限時 7 折</h3>
+      <div
+        class="container py-8 py-lg-10 d-flex flex-column gap-4 align-items-center position-relative overflow-hidden"
+      >
+        <h4>\ 母親節強檔活動 /</h4>
+        <h2>家庭訂閱方案限時 7 折</h2>
         <ul class="list-unstyled d-flex flex-column gap-3">
           <li>
             <span class="material-symbols-outlined"> check </span>
@@ -301,14 +279,20 @@
           </li>
         </ul>
 
-        <button class="btn btn-secondary-200 px-4 py-lg-3 px-lg-5">
+        <button class="btn btn-secondary-200 text-white px-4 py-lg-3 px-lg-5">
           我想了解
         </button>
 
-        <div class="decorate1 position-absolute d-none d-md-block" style="left: 0px; bottom: -10px;">
-          <img src="../assets/images/bg-1.png" alt="">
+        <div
+          class="decorate1 position-absolute d-none d-md-block"
+          style="left: 0px; bottom: -10px"
+        >
+          <img src="../assets/images/bg-1.png" alt="" />
         </div>
-        <div class="decorate2 position-absolute" style="right: -32px; bottom: -10px;">
+        <div
+          class="decorate2 position-absolute"
+          style="right: -32px; bottom: -10px"
+        >
           <picture>
             <source
               media="(min-width: 992px)"
@@ -323,75 +307,403 @@
         </div>
       </div>
     </section>
-    
+
     <section>
-      <div class="container py-10">
+      <div class="container py-8 py-lg-10">
         <h2 class="mb-7">大家都在看</h2>
-        <div class="row">
-          <div class="col col-3 bg-white d-none d-lg-block">
-            <ul class="list-unstyled p-5 d-flex flex-column gap-4">
-              <li class="fs-4 fw-bolder p-3 bg-secondary-100">． 酒精路跑地圖</li>
-              <li class="fs-4 fw-bolder p-3">． 台北拉麵圖鑑</li>
-              <li class="fs-4 fw-bolder p-3">． 海島自由行</li>
-              <li class="fs-4 fw-bolder p-3">． 短天數出國推薦</li>
-              <li class="fs-4 fw-bolder p-3">． 週末露營趣</li>
-            </ul>
+
+        <div class="row gx-5">
+          <div class="col col-3 d-none d-lg-block">
+            <div class="bg-white rounded-2 custom-shadow h-100">
+              <ul class="list-unstyled p-5 d-flex flex-column gap-4">
+                <li
+                  class="fs-6 fs-xl-5 fs-xxl-4 fw-bolder p-3 bg-secondary-100"
+                >
+                  ． 酒精路跑地圖
+                </li>
+                <li class="fs-6 fs-xl-5 fs-xxl-4 fw-bolder p-3">
+                  ． 台北拉麵圖鑑
+                </li>
+                <li class="fs-6 fs-xl-5 fs-xxl-4 fw-bolder p-3">
+                  ． 海島自由行
+                </li>
+                <li class="fs-6 fs-xl-5 fs-xxl-4 fw-bolder p-3">
+                  ． 短天數出國推薦
+                </li>
+                <li class="fs-6 fs-xl-5 fs-xxl-4 fw-bolder p-3">
+                  ． 週末露營趣
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col col-lg-9 d-none d-lg-block bg-white">
-            <div class="d-flex flex-column p-7">
+          <div class="col col-lg-9 d-none d-lg-block">
+            <div
+              class="d-flex flex-column p-7 bg-white rounded-2 custom-shadow"
+            >
               <div class="d-flex flex-column p-5 gap-5 w-100">
                 <h3>酒精路跑地圖</h3>
                 <ul class="list-unstyled d-flex flex-column gap-4">
                   <li class="fw-bold">｜城市酒吧人氣榜,盤點當紅熱門酒吧</li>
-                  <li class="fw-bold">｜你要的調酒師在這裡！五月全台酒吧客座活動整理</li>
+                  <li class="fw-bold">
+                    ｜你要的調酒師在這裡！五月全台酒吧客座活動整理
+                  </li>
                   <li class="fw-bold">｜台南老宅手工酒藏,尋味百年人文釀意</li>
                 </ul>
               </div>
               <ul class="photogrid d-flex justify-content-center list-unstyled">
-                <li><img src="../assets/images/hots-1.png" alt="" style="border-top-left-radius: 20px;border-bottom-left-radius: 20px;"></li>
-                <li><img src="../assets/images/hots-2.png" alt="" style="border-radius: 4px;"></li>
-                <li><img src="../assets/images/hots-3.png" alt="" style="border-radius: 4px;"></li>
-                <li><img src="../assets/images/hots-4.png" alt="" style="border-top-right-radius: 20px;border-bottom-right-radius: 20px;"></li>
+                <li>
+                  <img
+                    src="../assets/images/hots-1.png"
+                    alt=""
+                    style="
+                      border-top-left-radius: 20px;
+                      border-bottom-left-radius: 20px;
+                    "
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../assets/images/hots-2.png"
+                    alt=""
+                    style="border-radius: 4px"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../assets/images/hots-3.png"
+                    alt=""
+                    style="border-radius: 4px"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../assets/images/hots-4.png"
+                    alt=""
+                    style="
+                      border-top-right-radius: 20px;
+                      border-bottom-right-radius: 20px;
+                    "
+                  />
+                </li>
               </ul>
-              <div class="d-flex py-6 px-5">
-                <ul class="tags d-flex gap-2 me-auto list-unstyled">
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold">#夜貓行程</li>
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold">#barhopping</li>
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold">#全台酒吧</li>
+              <div class="d-flex align-items-center py-6 px-5">
+                <ul
+                  class="tags d-flex align-items-center gap-2 m-0 me-auto list-unstyled"
+                >
+                  <li class="tag color-primary-400 bg-primary-300 fw-bold">
+                    #夜貓行程
+                  </li>
+                  <li class="tag color-primary-400 bg-primary-300 fw-bold">
+                    #barhopping
+                  </li>
+                  <li class="tag color-primary-400 bg-primary-300 fw-bold">
+                    #全台酒吧
+                  </li>
                 </ul>
-                <div class="d-flex align-items-center"></div>
-                <p class="fs-4 m-0 p-0">View More</p>
-                <span class="material-symbols-outlined text-accent-200 fs-1 m-0 p-0 align-middle"> arrow_right_alt </span>
+                <%- include('./layout/components/ViewMore'); -%>
               </div>
             </div>
           </div>
 
-          <div class="col-12 d-lg-none">
-            <div class="card p-3">
+          <div class="col d-lg-none">
+            <div class="card p-3 rounded-2 border-0 custom-shadow">
               <h3 class="card-title">酒精路跑地圖</h3>
               <ul class="list-unstyled d-flex flex-column gap-1">
                 <li class="fw-bold">｜城市酒吧人氣榜,盤點當紅熱門酒吧</li>
-                <li class="fw-bold">｜你要的調酒師在這裡！五月全台酒吧客座活動整理</li>
+                <li class="fw-bold">
+                  ｜你要的調酒師在這裡！五月全台酒吧客座活動整理
+                </li>
                 <li class="fw-bold">｜台南老宅手工酒藏,尋味百年人文釀意</li>
               </ul>
-              <img src="../assets/images/hots-1-sm.png" class="card-img-top" alt="">
-              <div class="d-flex justify-content-center flex-column py-6 px-5">
-                <ul class="tags d-flex justify-content-center gap-2 me-auto list-unstyled w-100">
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold" style="font-size: 12px;">#夜貓行程</li>
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold" style="font-size: 12px;">#barhopping</li>
-                  <li class="tag px-1 color-primary-400 bg-primary-300 fw-bold" style="font-size: 12px;">#全台酒吧</li>
+              <img
+                src="../assets/images/hots-1-sm.png"
+                class="card-img-top mb-3"
+                alt=""
+              />
+              <div class="d-flex justify-content-center flex-column">
+                <ul
+                  class="tags d-flex justify-content-center gap-2 py-1 me-auto list-unstyled w-100"
+                >
+                  <li
+                    class="tag px-1 color-primary-400 bg-primary-300 fw-bold"
+                    style="font-size: 12px"
+                  >
+                    #夜貓行程
+                  </li>
+                  <li
+                    class="tag px-1 color-primary-400 bg-primary-300 fw-bold"
+                    style="font-size: 12px"
+                  >
+                    #barhopping
+                  </li>
+                  <li
+                    class="tag px-1 color-primary-400 bg-primary-300 fw-bold"
+                    style="font-size: 12px"
+                  >
+                    #全台酒吧
+                  </li>
                 </ul>
-                <div class="d-flex justify-content-center">
-                  <p class="fs-4 m-0 p-0">View More</p>
-                  <span class="material-symbols-outlined text-accent-200 fs-1 m-0 p-0 align-middle"> arrow_right_alt </span>
-                </div>
+                <%- include('./layout/components/ViewMore'); -%>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- <%- include('./layout/footer'); -%> -->
+
+    <section>
+      <div class="container py-8 py-lg-10">
+        <div class="position-relative">
+          <h2 class="mb-7">品味生活</h2>
+          <div class="position-absolute top-0 end-0">
+            <%- include('./layout/components/switch_arrows'); -%>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-12 col-md-4">
+            <p class="mb-4 mb-lg-6" style="font-size: 52px">食.</p>
+            <div class="mb-4 mb-lg-6">
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="../assets/images/life-1.png"
+                />
+                <img
+                  src="../assets/images/life-1-sm.png"
+                  alt=""
+                  class="w-100"
+                />
+              </picture>
+            </div>
+            <ul class="list-unstyled d-flex flex-column mb-5 mb-lg-6 gap-4">
+              <li class="fs-lg-5 fw-bold">｜米其林三星主廚的那些絕活傳奇</li>
+              <li class="fs-lg-5 fw-bold">｜探秘成都的地道川味秘技與魅力</li>
+              <li class="fs-lg-5 fw-bold">｜義大利釀酒師對於酒的堅持執著</li>
+            </ul>
+            <%- include('./layout/components/ViewMore'); -%>
+          </div>
+          <div class="col col-12 col-md-4">
+            <p class="mb-4 mb-lg-6" style="font-size: 52px">藝.</p>
+            <div class="mb-4 mb-lg-6">
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="../assets/images/life-2.png"
+                />
+                <img
+                  src="../assets/images/life-2-sm.png"
+                  alt=""
+                  class="w-100"
+                />
+              </picture>
+            </div>
+            <ul class="list-unstyled d-flex flex-column mb-5 mb-lg-6 gap-4">
+              <li class="fs-lg-5 fw-bold">
+                ｜解構教主級時裝設計大師的獨特美學
+              </li>
+              <li class="fs-lg-5 fw-bold">｜當代攝影師鏡頭中的光影離奇</li>
+              <li class="fs-lg-5 fw-bold">｜帶你穿縮中世紀，夏季文藝復興展</li>
+            </ul>
+            <%- include('./layout/components/ViewMore'); -%>
+          </div>
+          <div class="col col-12 col-md-4">
+            <p class="mb-4 mb-lg-6" style="font-size: 52px">旅.</p>
+            <div class="mb-4 mb-lg-6">
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="../assets/images/life-3.png"
+                />
+                <img
+                  src="../assets/images/life-3-sm.png"
+                  alt=""
+                  class="w-100"
+                />
+              </picture>
+            </div>
+            <ul class="list-unstyled d-flex flex-column mb-5 mb-lg-6 gap-4">
+              <li class="fs-lg-5 fw-bold">｜遠離喧囂,偶探巴塔哥尼亞終界</li>
+              <li class="fs-lg-5 fw-bold">｜東京深度六區,帶你細品極簡魅力</li>
+              <li class="fs-lg-5 fw-bold">｜專賣奇珍異寶的東歐地下夜市</li>
+            </ul>
+            <%- include('./layout/components/ViewMore'); -%>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary-200">
+      <div class="container py-8 py-lg-10">
+        <div class="row">
+          <div class="col col-12 col-md-6">
+            <div class="d-flex flex-column justify-content-center h-100">
+              <h4 class="fs-6 fs-xxl-4 mb-lg-3">今天又不知道要去哪裡了嗎</h4>
+              <div class="d-flex mb-lg-6">
+                <h2 class="fs-4 fs-lg-2">Vivre給你意想不到的生活風格提案</h2>
+              </div>
+              <div>
+                <button
+                  class="btn btn-secondary-200 text-white px-4 py-lg-3 px-lg-5 fs-4"
+                >
+                  馬上訂閱
+                  <span
+                    class="material-symbols-outlined fs-2"
+                    style="line-height: 1; vertical-align: middle"
+                  >
+                    arrow_right_alt
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6">
+            <ul class="row list-unstyled gy-7">
+              <li class="col col-12 col-lg-6">
+                <div class="position-relative mt-7">
+                  <div class="project-tag bg-white">
+                    <span
+                      class="material-symbols-outlined"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      play_arrow </span
+                    >人氣行程
+                  </div>
+                  <img
+                    src="../assets/images/projects-2.png"
+                    alt=""
+                    class="w-100"
+                  />
+                  <div
+                    class="d-flex justify-content-between align-items-center position-absolute p-2 w-100 bottom-0"
+                    style="color: white"
+                  >
+                    <h6 class="my-0">親子露營要帶什麼？</h6>
+                    <span
+                      class="material-symbols-outlined fs-2"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="col col-12 col-lg-6 d-none d-lg-block">
+                <div class="position-relative">
+                  <div class="project-tag bg-white">
+                    <span
+                      class="material-symbols-outlined"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      play_arrow </span
+                    >編輯推薦
+                  </div>
+                  <img
+                    src="../assets/images/projects-1.png"
+                    alt=""
+                    class="w-100"
+                  />
+                  <div
+                    class="d-flex justify-content-between align-items-center position-absolute p-2 w-100 bottom-0"
+                    style="color: white"
+                  >
+                    <h6 class="my-0">山女孩的健行筆記</h6>
+                    <span
+                      class="material-symbols-outlined fs-2"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="col col-12 col-lg-6 d-none d-lg-block">
+                <div class="position-relative">
+                  <div class="project-tag bg-white">
+                    <span
+                      class="material-symbols-outlined"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      play_arrow </span
+                    >編輯推薦
+                  </div>
+                  <img
+                    src="../assets/images/projects-3.png"
+                    alt=""
+                    class="w-100"
+                  />
+                  <div
+                    class="d-flex justify-content-between align-items-center position-absolute p-2 w-100 bottom-0"
+                    style="color: white"
+                  >
+                    <h6 class="my-0">質感房間改造攻略！</h6>
+                    <span
+                      class="material-symbols-outlined fs-2"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="col col-12 col-lg-6 d-none d-lg-block"
+                style="margin-top: 0px"
+              >
+                <div class="position-relative">
+                  <div class="project-tag bg-white">
+                    <span
+                      class="material-symbols-outlined"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      play_arrow </span
+                    >熱門文章
+                  </div>
+                  <img
+                    src="../assets/images/projects-4.png"
+                    alt=""
+                    class="w-100"
+                  />
+                  <div
+                    class="d-flex justify-content-between align-items-center position-absolute p-2 w-100 bottom-0"
+                    style="color: white"
+                  >
+                    <h6 class="my-0">適合溜小孩的海邊景點推薦</h6>
+                    <span
+                      class="material-symbols-outlined fs-2"
+                      style="line-height: 1; vertical-align: middle"
+                    >
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container py-8 py-lg-10">
+        <div class="d-flex flex-column flex-md-row">
+          <h2 class="text-center me-lg-auto">想看什麼主題由你決定</h2>
+          <div
+            class="d-flex flex-column align-items-center align-items-lg-end gap-3"
+          >
+            <h3>歡迎投稿與我們分享</h3>
+            <div>
+              <button
+                class="btn btn-secondary-200 text-white px-4 py-lg-3 px-lg-5 fs-4"
+              >
+                聯絡我們
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>
